@@ -55,7 +55,7 @@ class server_data;
 static std::weak_ptr<signal_handler> global_signal_set;
 
 server_data::server_data(base_server *server) :
-	logger(base_logger, blackhole::log::attributes_t()),
+	logger(base_logger, blackhole::attribute::set_t()),
 	connections_counter(0),
 	active_connections_counter(0),
 	server(server),
