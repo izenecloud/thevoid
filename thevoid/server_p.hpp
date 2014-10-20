@@ -26,7 +26,7 @@
 #include <mutex>
 #include <set>
 
-#include <swarm/logger.hpp>
+#include "swarm/logger.hpp"
 #include <atomic>
 
 namespace izenecloud {

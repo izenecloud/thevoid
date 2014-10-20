@@ -6,9 +6,15 @@ add_library(thevoid SHARED ${THEVOID_SRC_LIST})
 
 message("Boost_LIBRARIES: ${Boost_LIBRARIES}")
 
+find_package(PkgConfig REQUIRED)
+
+pkg_search_module(LIBIDN REQUIRED libidn)
+
+include_directories(${LIBIDN_INCLUDE_DIRS})
+
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}")
 
-target_link_libraries(thevoid ${Boost_LIBRARIES} pthread)
+target_link_libraries(thevoid ${Boost_LIBRARIES} pthread uriparser ${LIBIDN_LIBRARIES})
 
 install(FILES
 	server.hpp

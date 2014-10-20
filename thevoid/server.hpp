@@ -19,7 +19,7 @@
 
 #include "streamfactory.hpp"
 
-#include <swarm/logger.hpp>
+#include "swarm/logger.hpp"
 
 #include <boost/asio.hpp>
 #include <boost/noncopyable.hpp>
@@ -33,7 +33,7 @@
 #pragma GCC diagnostic ignored "-Wunused-local-typedefs"
 #endif
 
-#include <rapidjson/document.h>
+#include "rapidjson/document.h"
 
 #if !defined(__clang__) && defined(HAVE_GCC46)
 #pragma GCC diagnostic pop

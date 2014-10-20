@@ -30,7 +30,6 @@ find_package(Boost COMPONENTS system thread program_options regex filesystem REQ
 include(cmake/locate_library.cmake)
 
 locate_library(URIPARSER "Uri.h" "uriparser" "uriparser")
-locate_library(LIBXML2 "libxml/xpath.h" "xml2" "libxml2")
 
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/lib")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/lib")
@@ -38,15 +37,14 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/bin")
 
 include_directories(
     ${URIPARSER_INCLUDE_DIRS}
-    ${LIBXML2_INCLUDE_DIRS}
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${blackhole_INCLUDE_DIR}
 )
 
 link_directories(
     ${URIPARSER_LIBRARY_DIRS}
-    ${LIBXML2_LIBRARY_DIRS}
     ${Boost_LIBRARY_DIRS}
 )
 
-add_subdirectory(src)
+add_subdirectory(thevoid)
+add_subdirectory(example)
