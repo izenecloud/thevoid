@@ -30,9 +30,13 @@ find_package(Boost COMPONENTS system thread program_options regex filesystem REQ
 include(cmake/locate_library.cmake)
 
 locate_library(URIPARSER "Uri.h" "uriparser" "uriparser")
+locate_library(LIBXML2 "libxml/xpath.h" "xml2" "libxml2")
+
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/lib")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/lib")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/bin")
 
 include_directories(
-    ${CURL_INCLUDE_DIRS}
     ${URIPARSER_INCLUDE_DIRS}
     ${LIBXML2_INCLUDE_DIRS}
     ${CMAKE_CURRENT_SOURCE_DIR}
@@ -40,35 +44,9 @@ include_directories(
 )
 
 link_directories(
-    ${CURL_LIBRARY_DIRS}
     ${URIPARSER_LIBRARY_DIRS}
     ${LIBXML2_LIBRARY_DIRS}
     ${Boost_LIBRARY_DIRS}
 )
 
-aux_source_directory(. THEVOID_SRC_LIST)
-add_library(thevoid SHARED ${THEVOID_SRC_LIST})
-
-message("THEVOID_SRC_LIST: ${THEVOID_SRC_LIST}")
-message("Boost_LIBRARIES: ${Boost_LIBRARIES}")
-
-include_directories("${CMAKE_CURRENT_SOURCE_DIR}")
-
-add_subdirectory(swarm)
-
-target_link_libraries(thevoid ${Boost_LIBRARIES} pthread swarm)
-
-install(FILES
-	server.hpp
-	stream.hpp
-	streamfactory.hpp
-	http_request.hpp
-	http_response.hpp
-    DESTINATION include/thevoid/
-    )
-
-install(TARGETS thevoid
-    LIBRARY DESTINATION lib${LIB_SUFFIX}
-    ARCHIVE DESTINATION lib${LIB_SUFFIX}
-    BUNDLE DESTINATION library
-    )
+add_subdirectory(src)
