@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef IOREMAP_THEVOID_REQUEST_PARSER_HPP
-#define IOREMAP_THEVOID_REQUEST_PARSER_HPP
+#ifndef IZENECLOUD_THEVOID_REQUEST_PARSER_HPP
+#define IZENECLOUD_THEVOID_REQUEST_PARSER_HPP
 
 #include <boost/logic/tribool.hpp>
 #include <boost/tuple/tuple.hpp>
@@ -57,4 +57,4 @@ public:
 } // namespace izenecloud
 } // namespace thevoid
 
-#endif // IOREMAP_THEVOID_REQUEST_PARSER_HPP
+#endif // IZENECLOUD_THEVOID_REQUEST_PARSER_HPP

@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef IOREMAP_THEVOID_STREAM_HPP
-#define IOREMAP_THEVOID_STREAM_HPP
+#ifndef IZENECLOUD_THEVOID_STREAM_HPP
+#define IZENECLOUD_THEVOID_STREAM_HPP
 
 #include "http_request.hpp"
 #include "http_response.hpp"
@@ -702,4 +702,4 @@ private:
 
 }} // namespace izenecloud::thevoid
 
-#endif // IOREMAP_THEVOID_STREAM_HPP
+#endif // IZENECLOUD_THEVOID_STREAM_HPP

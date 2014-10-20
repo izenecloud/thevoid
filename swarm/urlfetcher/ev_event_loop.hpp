@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef IOREMAP_SWARM_EV_EVENT_LOOP_H
-#define IOREMAP_SWARM_EV_EVENT_LOOP_H
+#ifndef IZENECLOUD_SWARM_EV_EVENT_LOOP_H
+#define IZENECLOUD_SWARM_EV_EVENT_LOOP_H
 
 #include "event_loop.hpp"
 #include <blackhole/platform/compiler.hpp>
@@ -75,4 +75,4 @@ private:
 } // namespace swarm
 } // namespace izenecloud
 
-#endif // IOREMAP_SWARM_EV_EVENT_LOOP_H
+#endif // IZENECLOUD_SWARM_EV_EVENT_LOOP_H

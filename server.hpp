@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef IOREMAP_THEVOID_SERVER_HPP
-#define IOREMAP_THEVOID_SERVER_HPP
+#ifndef IZENECLOUD_THEVOID_SERVER_HPP
+#define IZENECLOUD_THEVOID_SERVER_HPP
 
 #include "streamfactory.hpp"
 
@@ -397,4 +397,4 @@ int run_server(int argc, char **argv, Args &&...args)
 
 } } // namespace izenecloud::thevoid
 
-#endif // IOREMAP_THEVOID_SERVER_HPP
+#endif // IZENECLOUD_THEVOID_SERVER_HPP

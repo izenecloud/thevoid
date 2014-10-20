@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef IOREMAP_THEVOID_CONNECTION_P_HPP
-#define IOREMAP_THEVOID_CONNECTION_P_HPP
+#ifndef IZENECLOUD_THEVOID_CONNECTION_P_HPP
+#define IZENECLOUD_THEVOID_CONNECTION_P_HPP
 
 #include <boost/asio.hpp>
 #include <boost/array.hpp>
@@ -215,4 +215,4 @@ typedef connection<boost::asio::local::stream_protocol::socket> unix_connection;
 
 }} // namespace izenecloud::thevoid
 
-#endif // IOREMAP_THEVOID_CONNECTION_P_HPP
+#endif // IZENECLOUD_THEVOID_CONNECTION_P_HPP

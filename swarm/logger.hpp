@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef IOREMAP_SWARM_LOGGER_H
-#define IOREMAP_SWARM_LOGGER_H
+#ifndef IZENECLOUD_SWARM_LOGGER_H
+#define IZENECLOUD_SWARM_LOGGER_H
 
 #ifndef BOOST_BIND_NO_PLACEHOLDERS
 # define BOOST_BIND_NO_PLACEHOLDERS
@@ -67,4 +67,4 @@ DECLARE_LOCAL_KEYWORD(url, std::string)
 } // namespace swarm
 } // namespace izenecloud
 
-#endif // IOREMAP_SWARM_LOGGER_H
+#endif // IZENECLOUD_SWARM_LOGGER_H

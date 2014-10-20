@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef IOREMAP_SWARM_HTTP_RESPONSE_HPP
-#define IOREMAP_SWARM_HTTP_RESPONSE_HPP
+#ifndef IZENECLOUD_SWARM_HTTP_RESPONSE_HPP
+#define IZENECLOUD_SWARM_HTTP_RESPONSE_HPP
 
 #include "url.hpp"
 #include "http_headers.hpp"
@@ -134,4 +134,4 @@ protected:
 } // namespace swarm
 } // namespace izenecloud
 
-#endif // IOREMAP_SWARM_HTTP_RESPONSE_HPP
+#endif // IZENECLOUD_SWARM_HTTP_RESPONSE_HPP

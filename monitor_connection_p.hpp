@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef IOREMAP_THEVOID_MONITOR_CONNECTION_P_HPP
-#define IOREMAP_THEVOID_MONITOR_CONNECTION_P_HPP
+#ifndef IZENECLOUD_THEVOID_MONITOR_CONNECTION_P_HPP
+#define IZENECLOUD_THEVOID_MONITOR_CONNECTION_P_HPP
 
 #include <boost/asio.hpp>
 #include <boost/array.hpp>
@@ -58,4 +58,4 @@ private:
 } // namespace thevoid
 } // namespace izenecloud
 
-#endif // IOREMAP_THEVOID_MONITOR_CONNECTION_P_HPP
+#endif // IZENECLOUD_THEVOID_MONITOR_CONNECTION_P_HPP

@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef IOREMAP_THEVOID_STREAMFACTORY_HPP
-#define IOREMAP_THEVOID_STREAMFACTORY_HPP
+#ifndef IZENECLOUD_THEVOID_STREAMFACTORY_HPP
+#define IZENECLOUD_THEVOID_STREAMFACTORY_HPP
 
 #include "stream.hpp"
 
@@ -54,4 +54,4 @@ private:
 
 }} // namespace izenecloud::thevoid
 
-#endif // IOREMAP_THEVOID_STREAMFACTORY_HPP
+#endif // IZENECLOUD_THEVOID_STREAMFACTORY_HPP

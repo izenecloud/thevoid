@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef IOREMAP_SWARM_NETWORK_QUERY_LIST_H
-#define IOREMAP_SWARM_NETWORK_QUERY_LIST_H
+#ifndef IZENECLOUD_SWARM_NETWORK_QUERY_LIST_H
+#define IZENECLOUD_SWARM_NETWORK_QUERY_LIST_H
 
 #include <memory>
 #include <utility>
@@ -152,4 +152,4 @@ private:
 } // namespace swarm
 } // namespace izenecloud
 
-#endif // IOREMAP_SWARM_NETWORK_QUERY_LIST_H
+#endif // IZENECLOUD_SWARM_NETWORK_QUERY_LIST_H

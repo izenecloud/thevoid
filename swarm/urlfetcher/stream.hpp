@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef IOREMAP_SWARM_STREAM_HPP
-#define IOREMAP_SWARM_STREAM_HPP
+#ifndef IZENECLOUD_SWARM_STREAM_HPP
+#define IZENECLOUD_SWARM_STREAM_HPP
 
 #include "url_fetcher.hpp"
 
@@ -91,4 +91,4 @@ private:
 } // namespace swarm
 } // namespace izenecloud
 
-#endif // IOREMAP_SWARM_STREAM_HPP
+#endif // IZENECLOUD_SWARM_STREAM_HPP

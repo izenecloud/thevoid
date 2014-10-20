@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef IOREMAP_SWARM_HTTP_REQUEST_P_HPP
-#define IOREMAP_SWARM_HTTP_REQUEST_P_HPP
+#ifndef IZENECLOUD_SWARM_HTTP_REQUEST_P_HPP
+#define IZENECLOUD_SWARM_HTTP_REQUEST_P_HPP
 
 #include "http_request.hpp"
 
@@ -41,4 +41,4 @@ public:
 } // namespace swarm
 } // namespace izenecloud
 
-#endif // IOREMAP_SWARM_HTTP_REQUEST_P_HPP
+#endif // IZENECLOUD_SWARM_HTTP_REQUEST_P_HPP

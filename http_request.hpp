@@ -1,5 +1,5 @@
-#ifndef IOREMAP_THEVOID_HTTP_REQUEST_H
-#define IOREMAP_THEVOID_HTTP_REQUEST_H
+#ifndef IZENECLOUD_THEVOID_HTTP_REQUEST_H
+#define IZENECLOUD_THEVOID_HTTP_REQUEST_H
 
 #include <swarm/http_request.hpp>
 
@@ -41,4 +41,4 @@ public:
 } // namespace thevoid
 } // namespace izenecloud
 
-#endif // IOREMAP_THEVOID_HTTP_REQUEST_H
+#endif // IZENECLOUD_THEVOID_HTTP_REQUEST_H

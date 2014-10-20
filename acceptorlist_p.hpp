@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef IOREMAP_THEVOID_ACCEPTORLIST_P_HPP
-#define IOREMAP_THEVOID_ACCEPTORLIST_P_HPP
+#ifndef IZENECLOUD_THEVOID_ACCEPTORLIST_P_HPP
+#define IZENECLOUD_THEVOID_ACCEPTORLIST_P_HPP
 
 #include "server.hpp"
 #include <boost/thread.hpp>
@@ -54,4 +54,4 @@ public:
 
 } }
 
-#endif // IOREMAP_THEVOID_ACCEPTORLIST_P_HPP
+#endif // IZENECLOUD_THEVOID_ACCEPTORLIST_P_HPP

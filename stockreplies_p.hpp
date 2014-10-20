@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef IOREMAP_THEVOID_STOCKREPLIES_P_HPP
-#define IOREMAP_THEVOID_STOCKREPLIES_P_HPP
+#ifndef IZENECLOUD_THEVOID_STOCKREPLIES_P_HPP
+#define IZENECLOUD_THEVOID_STOCKREPLIES_P_HPP
 
 #include <boost/asio/buffer.hpp>
 #include "http_response.hpp"
@@ -35,4 +35,4 @@ void to_buffers(const http_response &reply, std::vector<char> &buffer);
 
 } } // namespace izenecloud::thevoid
 
-#endif // IOREMAP_THEVOID_STOCKREPLIES_P_HPP
+#endif // IZENECLOUD_THEVOID_STOCKREPLIES_P_HPP

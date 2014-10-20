@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef IOREMAP_SWARM_HTTP_HEADERS_HPP
-#define IOREMAP_SWARM_HTTP_HEADERS_HPP
+#ifndef IZENECLOUD_SWARM_HTTP_HEADERS_HPP
+#define IZENECLOUD_SWARM_HTTP_HEADERS_HPP
 
 #include <boost/optional.hpp>
 #include <boost/range.hpp>
@@ -352,4 +352,4 @@ inline void http_headers::add(const std::string &name, const Range &range, typen
 } // namespace swarm
 } // namespace izenecloud
 
-#endif // IOREMAP_SWARM_HTTP_HEADERS_HPP
+#endif // IZENECLOUD_SWARM_HTTP_HEADERS_HPP
