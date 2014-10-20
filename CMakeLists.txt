@@ -29,10 +29,7 @@ find_package(Boost COMPONENTS system thread program_options regex filesystem REQ
 
 include(cmake/locate_library.cmake)
 
-locate_library(LIBEV "ev++.h" "ev" "libev")
-locate_library(CURL "curl.h" "curl" "curl" "libcurl")
 locate_library(URIPARSER "Uri.h" "uriparser" "uriparser")
-locate_library(LIBXML2 "libxml/xpath.h" "xml2" "libxml2")
 
 include_directories(
     ${CURL_INCLUDE_DIRS}
@@ -60,10 +57,6 @@ include_directories("${CMAKE_CURRENT_SOURCE_DIR}")
 add_subdirectory(swarm)
 
 target_link_libraries(thevoid ${Boost_LIBRARIES} pthread swarm)
-set_target_properties(thevoid PROPERTIES
-    VERSION ${DEBFULLVERSION}
-    SOVERSION ${SWARM_VERSION_ABI}
-    )
 
 install(FILES
 	server.hpp

@@ -30,10 +30,6 @@ include_directories(${LIBIDN_INCLUDE_DIRS})
 
 add_library(swarm SHARED ${SWARM_SRC_LIST})
 target_link_libraries(swarm uriparser ${Boost_LIBRARIES} ${LIBIDN_LIBRARIES})
-set_target_properties(swarm PROPERTIES
-    VERSION ${DEBFULLVERSION}
-    SOVERSION ${SWARM_VERSION_ABI}
-    )
 
 install(FILES
     ${SWARM_HDR_LIST}
@@ -47,6 +43,3 @@ install(TARGETS swarm
     )
 
 add_subdirectory(xml)
-if(BUILD_URLFETCHER)
-    add_subdirectory(urlfetcher)
-endif()
