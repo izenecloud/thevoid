@@ -5,7 +5,7 @@
     "backlog": 512,
     "threads": 2,
     "buffer_size": 65536,
-	"logger": {
+    "logger": {
         "level": "debug",
         "frontends": [
             {
@@ -23,7 +23,17 @@
                         "size": 1000000
                     }                    
                 }
-            }
+            },
+	    {
+                "formatter": {
+                    "type": "string",
+                    "pattern": "[%(timestamp)s] [%(severity)s]: %(message)s"
+                },
+                "sink": {
+                    "type": "stream",
+                    "output": "stdout"
+                }                    
+            }            
         ]
     },
     "daemon": {
