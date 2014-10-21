@@ -276,9 +276,10 @@ bool base_server::initialize_logger(const rapidjson::Value &config)
 			sink::files::boost_backend_t,
 			sink::rotator_t<
 				sink::files::boost_backend_t,
-				sink::rotation::watcher::move_t
+				sink::rotation::watcher::size_t
 			>
 		>,
+	    blackhole::sink::stream_t,
 	    blackhole::sink::syslog_t<swarm::log_level>,
 	    blackhole::sink::socket_t<boost::asio::ip::tcp>,
 	    blackhole::sink::socket_t<boost::asio::ip::udp>
@@ -296,8 +297,8 @@ bool base_server::initialize_logger(const rapidjson::Value &config)
 	const dynamic_t &dynamic = repository::config::transformer_t<
 		rapidjson::Value
         >::transform(frontends);
-        //"root" is default json node of log configuration
-	log_config_t log_config = repository::config::parser_t<log_config_t>::parse("logroot", dynamic);
+
+	log_config_t log_config = repository::config::parser_t<log_config_t>::parse("root", dynamic);
 
 	const auto mapper = swarm::utils::logger::mapping();
 	for(auto it = log_config.frontends.begin(); it != log_config.frontends.end(); ++it) {
