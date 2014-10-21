@@ -291,13 +291,13 @@ bool base_server::initialize_logger(const rapidjson::Value &config)
 	> formatters_t;
 
 	auto &repository = blackhole::repository_t::instance();
-	repository.configure<sinks_t, formatters_t>();
+	repository.registrate<sinks_t, formatters_t>();
 
 	const dynamic_t &dynamic = repository::config::transformer_t<
 		rapidjson::Value
         >::transform(frontends);
-
-	log_config_t log_config = repository::config::parser_t<log_config_t>::parse("root", dynamic);
+        //"root" is default json node of log configuration
+	log_config_t log_config = repository::config::parser_t<log_config_t>::parse("logroot", dynamic);
 
 	const auto mapper = swarm::utils::logger::mapping();
 	for(auto it = log_config.frontends.begin(); it != log_config.frontends.end(); ++it) {
