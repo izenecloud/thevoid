@@ -16,14 +16,17 @@ include_directories("${CMAKE_CURRENT_SOURCE_DIR}")
 
 target_link_libraries(thevoid ${Boost_LIBRARIES} pthread uriparser ${LIBIDN_LIBRARIES})
 
-install(FILES
-	server.hpp
-	stream.hpp
-	streamfactory.hpp
-	http_request.hpp
-  http_response.hpp
-  DESTINATION include/thevoid/
-  )
+#install(FILES
+#	server.hpp
+#	stream.hpp
+#	streamfactory.hpp
+#	http_request.hpp
+#  http_response.hpp
+#  DESTINATION include/thevoid/
+#  )
+install(DIRECTORY ./ DESTINATION include/thevoid
+    FILES_MATCHING PATTERN "*.hpp" PATTERN "*.h"
+    )
 
 install(TARGETS thevoid
     LIBRARY DESTINATION lib${LIB_SUFFIX}
