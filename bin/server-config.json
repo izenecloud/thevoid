@@ -1,0 +1,48 @@
+{
+    "endpoints": [
+        "0.0.0.0:8888"
+    ],
+    "backlog": 512,
+    "threads": 2,
+    "buffer_size": 65536,
+    "logger": {
+        "level": "debug",
+        "frontends": [
+            {
+                "formatter": {
+                    "type": "string",
+                    "pattern": "[%(timestamp)s] [%(severity)s]: %(message)s"
+                },
+                "sink": {
+                    "type": "files",
+                    "path": "./logs/blackhole-%(log_event_attribute)s.log",
+                    "autoflush": true,
+                    "rotation": {
+                        "pattern": "test.log.%N",
+                        "backups": 5,
+                        "size": 1000000
+                    }                    
+                }
+            },
+	    {
+                "formatter": {
+                    "type": "string",
+                    "pattern": "[%(timestamp)s] [%(severity)s]: %(message)s"
+                },
+                "sink": {
+                    "type": "stream",
+                    "output": "stdout"
+                }                    
+            }            
+        ]
+    },
+    "daemon": {
+        "fork": false,
+        "uid": 1000
+    },
+    "monitor-port": 9999,
+    "request_header": "X-Request",
+    "trace_header": "X-Trace",
+    "application": {
+    }
+}

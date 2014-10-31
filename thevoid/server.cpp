@@ -276,9 +276,10 @@ bool base_server::initialize_logger(const rapidjson::Value &config)
 			sink::files::boost_backend_t,
 			sink::rotator_t<
 				sink::files::boost_backend_t,
-				sink::rotation::watcher::move_t
+				sink::rotation::watcher::size_t
 			>
 		>,
+	    blackhole::sink::stream_t,
 	    blackhole::sink::syslog_t<swarm::log_level>,
 	    blackhole::sink::socket_t<boost::asio::ip::tcp>,
 	    blackhole::sink::socket_t<boost::asio::ip::udp>
@@ -291,7 +292,7 @@ bool base_server::initialize_logger(const rapidjson::Value &config)
 	> formatters_t;
 
 	auto &repository = blackhole::repository_t::instance();
-	repository.configure<sinks_t, formatters_t>();
+	repository.registrate<sinks_t, formatters_t>();
 
 	const dynamic_t &dynamic = repository::config::transformer_t<
 		rapidjson::Value
